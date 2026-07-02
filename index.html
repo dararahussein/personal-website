@@ -3,245 +3,297 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio — developer, builder, problem solver.">
-  <title>Your Name — Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Darara Hussein — CS student at University of Minnesota. Former intern at Mercury & Intuit.">
+  <title>★ Welcome to Darara's Homepage ★</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
 
-  <nav class="nav" id="nav">
-    <a href="#" class="nav-logo">YN</a>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span>
-      <span></span>
+  <div class="site-wrap">
+    <header class="win" id="nav">
+      <div class="win-titlebar">
+        <span class="win-title">darara.exe — Personal Homepage</span>
+        <div class="win-controls">
+          <button class="win-btn win-btn--min" type="button" aria-label="Collapse window">_</button>
+          <button class="win-btn" type="button" aria-label="Maximize window" tabindex="-1">□</button>
+          <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
+        </div>
+      </div>
+      <div class="win-body win-body--nav">
+        <p class="marquee-wrap" aria-hidden="true">
+          <span class="marquee">★ Welcome to my homepage ★ CS @ University of Minnesota ★ Ex-Mercury &amp; Intuit intern ★ Thanks for visiting ★</span>
+        </p>
+        <nav class="nav-links" id="nav-links">
+          <a href="#about">About Me</a>
+          <span class="nav-sep">|</span>
+          <a href="#experience">My Resume</a>
+          <span class="nav-sep">|</span>
+          <a href="#work">Cool Projects</a>
+          <span class="nav-sep">|</span>
+          <a href="#contact">Email Me!</a>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">Menu ▼</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="win hero" id="hero">
+        <div class="win-titlebar">
+          <span class="win-title">index.html — Welcome!</span>
+          <div class="win-controls">
+            <button class="win-btn win-btn--min" type="button" aria-label="Minimize window">_</button>
+            <button class="win-btn win-btn--max" type="button" aria-label="Maximize window">□</button>
+            <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
+          </div>
+        </div>
+        <div class="win-body hero-body">
+          <div class="hero-layout">
+            <div class="hero-main">
+              <p class="hero-welcome">Hello and welcome to my homepage!</p>
+              <h1 class="hero-name">Darara Hussein</h1>
+              <p class="hero-sub">Computer Science · University of Minnesota · Graduating December 2024</p>
+              <hr class="hr-rainbow">
+              <p class="hero-tagline">
+                CS student at the <strong>University of Minnesota</strong>. Former software engineering intern at
+                <strong>Mercury</strong> and <strong>Intuit</strong> (QuickBooks Online).
+              </p>
+              <div class="hero-actions">
+                <a href="#work" class="btn-retro">► View My Projects</a>
+                <a href="https://www.linkedin.com/in/dararahussein/" class="btn-retro" target="_blank" rel="noopener noreferrer">► My LinkedIn</a>
+              </div>
+            </div>
+            <table class="hero-table" cellpadding="10" cellspacing="0">
+              <tr>
+                <td class="hero-table-label"><strong>Status:</strong></td>
+                <td><span class="badge-online">● Online</span></td>
+              </tr>
+              <tr>
+                <td class="hero-table-label"><strong>Studying:</strong></td>
+                <td>CS @ University of Minnesota</td>
+              </tr>
+              <tr>
+                <td class="hero-table-label"><strong>Last role:</strong></td>
+                <td>Mercury (Intern)</td>
+              </tr>
+              <tr>
+                <td class="hero-table-label"><strong>Location:</strong></td>
+                <td>Minneapolis, MN</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="win-statusbar" aria-hidden="true">
+          <span class="statusbar-cell statusbar-cell--grow">Done</span>
+          <span class="statusbar-cell">🌐 Internet zone</span>
+        </div>
+      </section>
+
+      <section class="win" id="about">
+        <div class="win-titlebar">
+          <span class="win-title">about.txt</span>
+          <div class="win-controls">
+            <button class="win-btn win-btn--min" type="button" aria-label="Minimize window">_</button>
+            <button class="win-btn win-btn--max" type="button" aria-label="Maximize window">□</button>
+            <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="section-title">About Me!!!</h2>
+          <div class="about-layout">
+            <div class="about-text">
+              <p>
+                Hey — I'm Darara, a computer science student at the University of Minnesota.
+                I like building things that actually work: banking apps, accounting software,
+                and side projects at 2am.
+              </p>
+              <p>
+                I interned at Mercury on banking &amp; fintech products, and at Intuit on the
+                QuickBooks Online Chart of Accounts team. When I'm not coding I'm learning
+                something new or tweaking this website.
+              </p>
+            </div>
+            <aside class="about-sidebar">
+              <div class="sidebar-box">
+                <p class="sidebar-heading">Quick Facts</p>
+                <ul>
+                  <li>📚 University of Minnesota — CS (Dec 2024)</li>
+                  <li>🏢 Mercury — Intern '26</li>
+                  <li>☀️ Intuit — Intern '25</li>
+                  <li>📍 Minneapolis</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="win" id="experience">
+        <div class="win-titlebar">
+          <span class="win-title">resume.doc</span>
+          <div class="win-controls">
+            <button class="win-btn win-btn--min" type="button" aria-label="Minimize window">_</button>
+            <button class="win-btn win-btn--max" type="button" aria-label="Maximize window">□</button>
+            <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="section-title">Where I've Worked &amp; Learned</h2>
+          <div class="exp-list">
+            <article class="exp-item">
+              <table class="exp-table" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><strong>Software Engineer Intern</strong> @ Mercury <span class="badge-new" aria-hidden="true">NEW!</span></td>
+                  <td class="exp-date" align="right">Jan 2026 – May 2026</td>
+                </tr>
+              </table>
+              <p class="exp-loc">Remote</p>
+              <p>Built banking &amp; fintech products for startups and businesses.</p>
+            </article>
+            <hr class="hr-dotted">
+            <article class="exp-item">
+              <table class="exp-table" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><strong>Software Engineer Intern</strong> @ Intuit</td>
+                  <td class="exp-date" align="right">May 2025 – Aug 2025</td>
+                </tr>
+              </table>
+              <p class="exp-loc">Mountain View, CA</p>
+              <p>QuickBooks Online — Chart of Accounts team.</p>
+            </article>
+            <hr class="hr-dotted">
+            <article class="exp-item">
+              <table class="exp-table" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><strong>Computer Science</strong> @ University of Minnesota</td>
+                  <td class="exp-date" align="right">Present</td>
+                </tr>
+              </table>
+              <p class="exp-loc">Minneapolis, MN</p>
+              <p>Software engineering, data structures, building real apps. Graduating December 2024.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="win" id="work">
+        <div class="win-titlebar">
+          <span class="win-title">projects/ — Cool Stuff I Made</span>
+          <div class="win-controls">
+            <button class="win-btn win-btn--min" type="button" aria-label="Minimize window">_</button>
+            <button class="win-btn win-btn--max" type="button" aria-label="Maximize window">□</button>
+            <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="section-title">My Projects ★</h2>
+          <div class="projects">
+            <article class="project-card">
+              <h3>📁 Fraud Detection Engine</h3>
+              <p>Rule-based fraud detection — velocity checks, geo-jumps, blacklists, real-time approve/review/decline.</p>
+              <p class="project-tags"><strong>Tags:</strong> Python · Data Processing · Rule Engine</p>
+              <a href="https://github.com/dararahussein/Fraud-Detection-System" target="_blank" rel="noopener noreferrer">[ Download from GitHub ]</a>
+            </article>
+            <article class="project-card">
+              <h3>📁 Weather Way</h3>
+              <p>Weather app with clean forecasts and good UX. API integration + JavaScript.</p>
+              <p class="project-tags"><strong>Tags:</strong> JavaScript · API · UI/UX</p>
+              <a href="https://github.com/darar/weather-way" target="_blank" rel="noopener noreferrer">[ Download from GitHub ]</a>
+            </article>
+            <article class="project-card">
+              <h3>📁 PunchStats</h3>
+              <p>Stats &amp; analytics tool — track performance data and visualize trends.</p>
+              <p class="project-tags"><strong>Tags:</strong> Analytics · Data Viz · Full Stack</p>
+              <a href="https://github.com/dararahussein/PunchStats" target="_blank" rel="noopener noreferrer">[ Download from GitHub ]</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="win" id="contact">
+        <div class="win-titlebar">
+          <span class="win-title">contact.me — Send Me a Message!</span>
+          <div class="win-controls">
+            <button class="win-btn win-btn--min" type="button" aria-label="Minimize window">_</button>
+            <button class="win-btn win-btn--max" type="button" aria-label="Maximize window">□</button>
+            <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
+          </div>
+        </div>
+        <div class="win-body contact-body">
+          <h2 class="section-title">Let's Connect!!</h2>
+          <p>Wanna chat? Hit me up on LinkedIn — I'm in Minneapolis and always down to talk code.</p>
+          <p class="contact-links">
+            <a href="https://www.linkedin.com/in/dararahussein/" class="btn-retro btn-retro--big" target="_blank" rel="noopener noreferrer">► Add Me on LinkedIn</a>
+          </p>
+          <p>
+            <a href="https://github.com/dararahussein" target="_blank" rel="noopener noreferrer">GitHub</a>
+            ·
+            <a href="https://www.linkedin.com/in/dararahussein/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </p>
+          <div class="guestbook">
+            <p class="guestbook-title">~ Guestbook ~</p>
+            <p class="guestbook-msg">Thanks for visiting my site!! Sign my guestbook by connecting on LinkedIn. :)</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <hr class="hr-rainbow">
+      <div class="construction" role="presentation" title="Under construction!"></div>
+      <p class="footer-counter">You are visitor #<span id="visitor-count">000000</span> !!</p>
+      <div class="badges" aria-hidden="true">
+        <span class="badge88 badge88--netscape">Netscape<br>NOW! 4.0</span>
+        <span class="badge88 badge88--html">HTML 4.0<br>approved</span>
+        <span class="badge88 badge88--notepad">Made with<br>Notepad</span>
+        <span class="badge88 badge88--y2k">Y2K OK!</span>
+        <span class="badge88 badge88--res">800×600<br>optimized</span>
+      </div>
+      <p class="footer-meta">
+        Best viewed in Netscape Navigator 4.0 · 800×600 · Last updated: June 2026
+      </p>
+      <p class="footer-copy">&copy; 2026 Darara Hussein. Made with HTML + Notepad vibes.</p>
+      <p class="footer-blink">Under perpetual construction 🚧</p>
+    </footer>
+  </div>
+
+  <button class="scroll-top btn-retro" id="scroll-top" type="button" aria-label="Back to top" hidden>▲ Top</button>
+
+  <nav class="taskbar" aria-label="Taskbar">
+    <button class="start-btn" id="start-btn" type="button" aria-expanded="false" aria-controls="start-menu">
+      <span class="start-logo" aria-hidden="true"></span>Start
     </button>
+    <span class="taskbar-divider" aria-hidden="true"></span>
+    <div class="taskbar-tasks">
+      <a class="taskbar-btn" href="#about">📄 About</a>
+      <a class="taskbar-btn" href="#experience">📋 Resume</a>
+      <a class="taskbar-btn" href="#work">📁 Projects</a>
+      <a class="taskbar-btn" href="#contact">✉️ Contact</a>
+    </div>
+    <div class="taskbar-tray"><span id="taskbar-clock">--:--</span></div>
   </nav>
 
-  <main>
-    <section class="hero" id="hero">
-      <div class="hero-content">
-        <p class="hero-greeting reveal">Hello, I'm</p>
-        <h1 class="hero-name reveal">Your Name</h1>
-        <p class="hero-tagline reveal">
-          I build software that turns complex problems into
-          <em>clear, reliable systems</em>.
-        </p>
-        <div class="hero-actions reveal">
-          <a href="#work" class="btn btn-primary">View my work</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
-        </div>
-      </div>
-      <div class="hero-visual reveal" aria-hidden="true">
-        <div class="orbit">
-          <div class="orbit-ring"></div>
-          <div class="orbit-ring orbit-ring--inner"></div>
-          <div class="orbit-core"></div>
-        </div>
-      </div>
-      <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
-        <span>Scroll</span>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M10 3v14M10 17l-4-4M10 17l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </section>
+  <div class="start-menu" id="start-menu" hidden>
+    <div class="start-menu-side" aria-hidden="true">Darara&nbsp;98</div>
+    <ul>
+      <li><a href="#hero">🏠 Home</a></li>
+      <li><a href="#about">📄 About Me</a></li>
+      <li><a href="#experience">📋 My Resume</a></li>
+      <li><a href="#work">📁 Cool Projects</a></li>
+      <li><a href="#contact">✉️ Email Me!</a></li>
+      <li class="start-sep" role="separator"></li>
+      <li><a href="https://github.com/dararahussein" target="_blank" rel="noopener noreferrer">🐙 GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/dararahussein/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a></li>
+      <li class="start-sep" role="separator"></li>
+      <li><button type="button" id="shutdown-btn">🔌 Shut Down...</button></li>
+    </ul>
+  </div>
 
-    <section class="section about" id="about">
-      <div class="container">
-        <div class="section-label reveal">About</div>
-        <div class="about-grid">
-          <h2 class="about-heading reveal">
-            Developer with a focus on data, systems, and building things that work.
-          </h2>
-          <div class="about-body reveal">
-            <p>
-              I'm a software developer passionate about solving real-world problems
-              through clean code and thoughtful design. From fraud detection pipelines
-              to weather apps, I enjoy projects where engineering meets impact.
-            </p>
-            <p>
-              When I'm not coding, you'll find me exploring new technologies,
-              refining side projects, and learning something new every day.
-            </p>
-            <div class="about-stats">
-              <div class="stat">
-                <span class="stat-number">3+</span>
-                <span class="stat-label">Projects shipped</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">Python</span>
-                <span class="stat-label">Primary language</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">∞</span>
-                <span class="stat-label">Curiosity</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section work" id="work">
-      <div class="container">
-        <div class="section-label reveal">Selected Work</div>
-        <h2 class="section-heading reveal">Projects I've built</h2>
-
-        <div class="projects">
-          <article class="project-card reveal">
-            <div class="project-number">01</div>
-            <div class="project-content">
-              <h3>Fraud Detection Engine</h3>
-              <p>
-                A rule-based fraud detection system that processes transaction streams
-                and applies velocity, amount spike, geo-jump, and blacklist rules to
-                approve, review, or decline transactions in real time.
-              </p>
-              <ul class="project-tags">
-                <li>Python</li>
-                <li>Data Processing</li>
-                <li>Rule Engine</li>
-              </ul>
-              <a href="https://github.com/darar/Fraud-Detection" class="project-link" target="_blank" rel="noopener noreferrer">
-                View project
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-number">02</div>
-            <div class="project-content">
-              <h3>Weather Way</h3>
-              <p>
-                A weather application focused on delivering clear, actionable forecasts.
-                Built with attention to UX and reliable data presentation for everyday use.
-              </p>
-              <ul class="project-tags">
-                <li>JavaScript</li>
-                <li>API Integration</li>
-                <li>UI/UX</li>
-              </ul>
-              <a href="https://github.com/darar/weather-way" class="project-link" target="_blank" rel="noopener noreferrer">
-                View project
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-number">03</div>
-            <div class="project-content">
-              <h3>PunchStats</h3>
-              <p>
-                A statistics and analytics tool for tracking and visualizing performance
-                data. Designed to surface insights from raw numbers into meaningful trends.
-              </p>
-              <ul class="project-tags">
-                <li>Analytics</li>
-                <li>Data Viz</li>
-                <li>Full Stack</li>
-              </ul>
-              <a href="https://github.com/darar/PunchStats" class="project-link" target="_blank" rel="noopener noreferrer">
-                View project
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section skills" id="skills">
-      <div class="container">
-        <div class="section-label reveal">Skills</div>
-        <h2 class="section-heading reveal">What I work with</h2>
-
-        <div class="skills-grid reveal">
-          <div class="skill-group">
-            <h3>Languages</h3>
-            <ul>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>HTML / CSS</li>
-              <li>SQL</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3>Tools & Frameworks</h3>
-            <ul>
-              <li>Git & GitHub</li>
-              <li>Pandas</li>
-              <li>Node.js</li>
-              <li>REST APIs</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3>Focus Areas</h3>
-            <ul>
-              <li>Data Engineering</li>
-              <li>Backend Systems</li>
-              <li>Fraud Detection</li>
-              <li>Web Development</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="container">
-        <div class="contact-inner reveal">
-          <div class="section-label">Contact</div>
-          <h2 class="contact-heading">
-            Let's build something<br>
-            <em>together.</em>
-          </h2>
-          <p class="contact-text">
-            Open to collaborations, freelance work, and interesting conversations.
-            Drop me a line — I typically respond within a day.
-          </p>
-          <a href="mailto:your.email@example.com" class="btn btn-primary btn-large">
-            your.email@example.com
-          </a>
-          <div class="social-links">
-            <a href="https://github.com/darar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
-            </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Your Name. Built with care.</p>
-    </div>
-  </footer>
+  <div class="shutdown" id="shutdown" hidden>
+    <p class="shutdown-msg">It's now safe to turn off<br>your computer.</p>
+    <p class="shutdown-hint">(click anywhere to reboot)</p>
+  </div>
 
   <script src="script.js"></script>
 </body>
