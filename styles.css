@@ -311,13 +311,24 @@ button {
 
 .exp-top {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
 }
 
+.exp-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background-color: #ffffff;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
 .exp-badge {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 6px;
   border: 1px solid var(--border);
   background-color: var(--bg-subtle);
@@ -329,7 +340,6 @@ button {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transform: translateY(1px);
 }
 
 .exp-company {
@@ -359,7 +369,7 @@ button {
 
 .exp-summary {
   margin: 0;
-  padding-left: 32px;
+  padding-left: 34px;
   font-size: 13.5px;
   color: var(--text-muted);
   line-height: 1.55;
@@ -518,6 +528,37 @@ button {
   border-top: 1px solid var(--border);
 }
 
+.notes-list.is-empty {
+  border-top: none;
+}
+
+.notes-empty {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px dashed var(--border-strong);
+  background-color: var(--bg-subtle);
+}
+
+.notes-empty-badge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.notes-empty-text {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
 .note-row {
   display: flex;
   align-items: baseline;
@@ -653,7 +694,7 @@ button {
 
   .exp-period {
     width: 100%;
-    padding-left: 32px;
+    padding-left: 34px;
   }
 
   .note-row {

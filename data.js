@@ -27,6 +27,7 @@ window.PORTFOLIO_DATA = {
   experience: [
     {
       company: "Mercury",
+      logo: "./assets/mercury.png",
       monogram: "M",
       role: "Software Engineer Intern",
       period: "Jan – May 2026",
@@ -35,6 +36,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       company: "Intuit",
+      logo: "./assets/intuit.png",
       monogram: "I",
       role: "Software Engineer Intern",
       period: "May – Aug 2025",
@@ -43,11 +45,12 @@ window.PORTFOLIO_DATA = {
     },
     {
       company: "University of Minnesota",
+      logo: "./assets/umn.png",
       monogram: "U",
-      role: "B.S. in Computer Science",
+      role: "Bachelor of Arts in Computer Science",
       period: "Minneapolis, MN",
       location: "Minneapolis, MN",
-      summary: "Systems programming, algorithms, data structures, and software engineering."
+      summary: ""
     }
   ],
 
@@ -93,44 +96,17 @@ window.PORTFOLIO_DATA = {
     }
   ],
 
-  // Add, edit, or remove articles here! Each note automatically gets its own
-  // shareable link (#note/your-slug) and clean distraction-free reader view.
-  notes: [
-    {
-      slug: "pre-handshake-tls-inspection",
-      title: "Inspecting TLS ClientHello on the Wire Before Handshake Completion",
-      date: "2026-11",
-      readTime: "4 min read",
-      excerpt: "How JA4 fingerprinting and pre-handshake policy checks stop spoofed HTTP clients before spending CPU on TLS termination.",
-      paragraphs: [
-        "Most HTTP reverse proxies inspect traffic only after completing the TLS handshake. Under automated scraping or volumetric floods, terminating TLS first means burning asymmetric cryptography CPU cycles on clients that could have been rejected on their very first TCP packet.",
-        "While building TLSGate, I implemented a non-blocking wire parser that peeks the initial RFC 8446 ClientHello record directly from raw TCP buffers—extracting cipher suites, ALPN, SNI, supported versions, and extension ordering while stripping RFC 8701 GREASE values to compute a deterministic JA4 fingerprint.",
-        "Comparing that wire-level TLS fingerprint against the decrypted HTTP User-Agent immediately exposes bots impersonating Chrome or Safari with Python, Go, or curl TLS stacks—while high-confidence offenders can be pushed down to an eBPF/XDP map for kernel-level drops."
-      ]
-    },
-    {
-      slug: "rootless-linux-sandboxing",
-      title: "Fast Rootless Code Sandboxing Without a Container Daemon",
-      date: "2026-10",
-      readTime: "4 min read",
-      excerpt: "Combining pre-warmed zygote workers with Linux namespaces, overlayfs, cgroups v2, and seccomp-BPF.",
-      paragraphs: [
-        "Spinning up a full container runtime for short-lived, untrusted code snippets introduces hundreds of milliseconds of cold-start overhead. Yet running untrusted workloads in bare subprocesses leaves the host filesystem, network, and syscall surface exposed.",
-        "In CageRun, a pool of pre-warmed zygote workers amortizes runtime initialization. Each incoming job clones isolated user, PID, mount, IPC, and network namespaces, pivots into a disposable overlayfs root, attaches cgroups v2 memory/CPU/PID quotas, and locks down syscalls with a compiled seccomp-BPF filter before executing user bytes.",
-        "Pairing seccomp enforcement with C eBPF tracepoints over a ring buffer gives both hard kernel isolation and structured audit trails whenever untrusted code probes a restricted boundary."
-      ]
-    },
-    {
-      slug: "shipping-in-large-codebases",
-      title: "What Internships Taught Me About Shipping in Production Codebases",
-      date: "2026-06",
-      readTime: "3 min read",
-      excerpt: "Notes from building financial and accounting software at Mercury and Intuit.",
-      paragraphs: [
-        "Building side projects at 2am rewards raw speed: you hold the entire data model in your head and ship straight to main. Working on production financial software—like startup banking workflows at Mercury and QuickBooks Online at Intuit—flips that equation.",
-        "In systems handling real money and accounting ledgers, tracing existing invariants, designing explicit state transitions, and writing thorough tests matter far more than clever abstractions. Small schema or UI changes ripple across years of customer workflows.",
-        "The biggest takeaway for me has been treating clarity as an engineering feature: small pull requests, predictable failure modes, and leaving every module easier to reason about than I found it."
-      ]
-    }
-  ]
+  // Leave empty [] to display the "Under construction" note banner.
+  // When you're ready to publish a note, add an object using this format:
+  // {
+  //   slug: "my-first-note",
+  //   title: "Title of Your Note",
+  //   date: "2026-12",
+  //   readTime: "3 min read",
+  //   paragraphs: [
+  //     "First paragraph...",
+  //     "Second paragraph..."
+  //   ]
+  // }
+  notes: []
 };

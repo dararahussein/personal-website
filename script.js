@@ -133,13 +133,17 @@
         (exp) => `
         <div class="exp-item">
           <div class="exp-top">
-            <span class="exp-badge" aria-hidden="true">${exp.monogram}</span>
+            ${
+              exp.logo
+                ? `<img class="exp-logo" src="${exp.logo}" alt="${exp.company} logo" width="24" height="24" />`
+                : `<span class="exp-badge" aria-hidden="true">${exp.monogram}</span>`
+            }
             <span class="exp-company">${exp.company}</span>
             <span class="exp-role">${exp.role}</span>
             <span class="exp-leader" aria-hidden="true"></span>
             <span class="exp-period">${exp.period}</span>
           </div>
-          <p class="exp-summary">${exp.summary}</p>
+          ${exp.summary ? `<p class="exp-summary">${exp.summary}</p>` : ""}
         </div>
       `
       )
@@ -215,10 +219,17 @@
     if (!container || !section) return;
 
     if (!data.notes || data.notes.length === 0) {
-      section.hidden = true;
+      container.classList.add("is-empty");
+      container.innerHTML = `
+        <div class="notes-empty">
+          <span class="notes-empty-badge">🚧 Under construction</span>
+          <span class="notes-empty-text">Notes &amp; writing coming soon.</span>
+        </div>
+      `;
       return;
     }
 
+    container.classList.remove("is-empty");
     container.innerHTML = data.notes
       .map(
         (note) => `
