@@ -1,300 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Darara Hussein — CS student at University of Minnesota. Former intern at Mercury & Intuit.">
-  <title>★ Welcome to Darara's Homepage ★</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darara Hussein — Software Engineer</title>
+  <meta
+    name="description"
+    content="Darara Hussein — Software Engineer & CS student at the University of Minnesota. Former software engineering intern at Mercury and Intuit."
+  />
+  <meta property="og:title" content="Darara Hussein — Software Engineer" />
+  <meta
+    property="og:description"
+    content="Computer Science @ University of Minnesota. Former software engineering intern at Mercury and Intuit."
+  />
+  <meta property="og:type" content="website" />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111113'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='monospace' font-weight='700' font-size='14'%3EDH%3C/text%3E%3C/svg%3E"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+  <script>
+    // Apply saved theme before paint to prevent flash
+    (function () {
+      try {
+        var saved = localStorage.getItem("dh_portfolio_theme");
+        if (saved === "dark" || saved === "light") {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-  <div class="stars" aria-hidden="true"></div>
-  <div class="scanlines" aria-hidden="true"></div>
-
-  <div class="site-wrap">
-    <header class="win" id="nav">
-      <div class="win-titlebar">
-        <span class="win-title">darara.exe — Personal Homepage</span>
-        <div class="win-controls">
-          <button class="win-btn win-btn--min" type="button" aria-label="Collapse window">_</button>
-          <button class="win-btn" type="button" aria-label="Maximize window" tabindex="-1">□</button>
-          <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
-        </div>
-      </div>
-      <div class="win-body win-body--nav">
-        <p class="marquee-wrap" aria-hidden="true">
-          <span class="marquee">★ Welcome to my homepage ★ CS @ University of Minnesota ★ Ex-Mercury &amp; Intuit intern ★ Thanks for visiting ★</span>
-        </p>
-        <nav class="nav-links" id="nav-links">
-          <a href="#about">About Me</a>
-          <span class="nav-sep">|</span>
-          <a href="#experience">My Resume</a>
-          <span class="nav-sep">|</span>
-          <a href="#work">Cool Projects</a>
-          <span class="nav-sep">|</span>
-          <a href="#contact">Email Me!</a>
+  <div class="shell">
+    <!-- Minimal Top Navigation -->
+    <header class="topbar">
+      <a href="#" class="brand" id="brand-home">dhussein.com</a>
+      <div class="topbar-right">
+        <nav class="topnav" aria-label="Primary sections">
+          <a href="#experience">Experience</a>
+          <a href="#work">Work</a>
+          <a href="#notes">Notes</a>
         </nav>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">Menu ▼</button>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle theme"
+        ></button>
       </div>
     </header>
 
     <main>
-      <section class="win hero" id="hero">
-        <div class="win-titlebar">
-          <span class="win-title">index.html — Welcome!</span>
-          <div class="win-controls">
-            <button class="win-btn win-btn--min" type="button" aria-label="Minimize window">_</button>
-            <button class="win-btn win-btn--max" type="button" aria-label="Maximize window">□</button>
-            <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
-          </div>
-        </div>
-        <div class="win-body hero-body">
-          <div class="hero-layout">
-            <div class="hero-main">
-              <p class="hero-welcome">Hello and welcome to my homepage!</p>
-              <h1 class="hero-name">Darara Hussein</h1>
-              <p class="hero-sub">Computer Science · University of Minnesota · Graduating December 2024</p>
-              <hr class="hr-rainbow">
-              <p class="hero-tagline">
-                CS student at the <strong>University of Minnesota</strong>. Former software engineering intern at
-                <strong>Mercury</strong> and <strong>Intuit</strong> (QuickBooks Online).
-              </p>
-              <div class="hero-actions">
-                <a href="#work" class="btn-retro">► View My Projects</a>
-                <a href="https://www.linkedin.com/in/dararahussein/" class="btn-retro" target="_blank" rel="noopener noreferrer">► My LinkedIn</a>
-              </div>
-            </div>
-            <table class="hero-table" cellpadding="10" cellspacing="0">
-              <tr>
-                <td class="hero-table-label"><strong>Status:</strong></td>
-                <td><span class="badge-online">● Online</span></td>
-              </tr>
-              <tr>
-                <td class="hero-table-label"><strong>Studying:</strong></td>
-                <td>CS @ University of Minnesota</td>
-              </tr>
-              <tr>
-                <td class="hero-table-label"><strong>Last role:</strong></td>
-                <td>Mercury (Intern)</td>
-              </tr>
-              <tr>
-                <td class="hero-table-label"><strong>Location:</strong></td>
-                <td>Minneapolis, MN</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="win-statusbar" aria-hidden="true">
-          <span class="statusbar-cell statusbar-cell--grow">Done</span>
-          <span class="statusbar-cell">🌐 Internet zone</span>
-        </div>
-      </section>
+      <!-- Single-Column Home View -->
+      <div id="home-view" class="home-view">
+        <!-- Intro -->
+        <section id="intro" aria-label="Introduction"></section>
 
-      <section class="win" id="about">
-        <div class="win-titlebar">
-          <span class="win-title">about.txt</span>
-          <div class="win-controls">
-            <button class="win-btn win-btn--min" type="button" aria-label="Minimize window">_</button>
-            <button class="win-btn win-btn--max" type="button" aria-label="Maximize window">□</button>
-            <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
+        <!-- Experience -->
+        <section id="experience" class="section" aria-labelledby="exp-heading">
+          <div class="section-header">
+            <h2 id="exp-heading" class="section-label">Experience</h2>
           </div>
-        </div>
-        <div class="win-body">
-          <h2 class="section-title">About Me!!!</h2>
-          <div class="about-layout">
-            <div class="about-text">
-              <p>
-                Hey — I'm Darara, a computer science student at the University of Minnesota.
-                I like building things that actually work: banking apps, accounting software,
-                and side projects at 2am.
-              </p>
-              <p>
-                I interned at Mercury on banking &amp; fintech products, and at Intuit on the
-                QuickBooks Online Chart of Accounts team. When I'm not coding I'm learning
-                something new or tweaking this website.
-              </p>
-            </div>
-            <aside class="about-sidebar">
-              <div class="sidebar-box">
-                <p class="sidebar-heading">Quick Facts</p>
-                <ul>
-                  <li>📚 University of Minnesota — CS (Dec 2024)</li>
-                  <li>🏢 Mercury — Intern '26</li>
-                  <li>☀️ Intuit — Intern '25</li>
-                  <li>📍 Minneapolis</li>
-                </ul>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
+          <div id="experience-list" class="exp-list"></div>
+        </section>
 
-      <section class="win" id="experience">
-        <div class="win-titlebar">
-          <span class="win-title">resume.doc</span>
-          <div class="win-controls">
-            <button class="win-btn win-btn--min" type="button" aria-label="Minimize window">_</button>
-            <button class="win-btn win-btn--max" type="button" aria-label="Maximize window">□</button>
-            <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
+        <!-- Selected Work -->
+        <section id="work" class="section" aria-labelledby="work-heading">
+          <div class="section-header">
+            <h2 id="work-heading" class="section-label">Selected Work</h2>
+            <span class="section-hint">Click to expand</span>
           </div>
-        </div>
-        <div class="win-body">
-          <h2 class="section-title">Where I've Worked &amp; Learned</h2>
-          <div class="exp-list">
-            <article class="exp-item">
-              <table class="exp-table" width="100%" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td><strong>Software Engineer Intern</strong> @ Mercury <span class="badge-new" aria-hidden="true">NEW!</span></td>
-                  <td class="exp-date" align="right">Jan 2026 – May 2026</td>
-                </tr>
-              </table>
-              <p class="exp-loc">Remote</p>
-              <p>Built banking &amp; fintech products for startups and businesses.</p>
-            </article>
-            <hr class="hr-dotted">
-            <article class="exp-item">
-              <table class="exp-table" width="100%" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td><strong>Software Engineer Intern</strong> @ Intuit</td>
-                  <td class="exp-date" align="right">May 2025 – Aug 2025</td>
-                </tr>
-              </table>
-              <p class="exp-loc">Mountain View, CA</p>
-              <p>QuickBooks Online — Chart of Accounts team.</p>
-            </article>
-            <hr class="hr-dotted">
-            <article class="exp-item">
-              <table class="exp-table" width="100%" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td><strong>Computer Science</strong> @ University of Minnesota</td>
-                  <td class="exp-date" align="right">Present</td>
-                </tr>
-              </table>
-              <p class="exp-loc">Minneapolis, MN</p>
-              <p>Software engineering, data structures, building real apps. Graduating December 2024.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+          <div id="work-list" class="work-list"></div>
+        </section>
 
-      <section class="win" id="work">
-        <div class="win-titlebar">
-          <span class="win-title">projects/ — Cool Stuff I Made</span>
-          <div class="win-controls">
-            <button class="win-btn win-btn--min" type="button" aria-label="Minimize window">_</button>
-            <button class="win-btn win-btn--max" type="button" aria-label="Maximize window">□</button>
-            <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
+        <!-- Notes / Writing -->
+        <section id="notes" class="section" aria-labelledby="notes-heading">
+          <div class="section-header">
+            <h2 id="notes-heading" class="section-label">Notes</h2>
           </div>
-        </div>
-        <div class="win-body">
-          <h2 class="section-title">My Projects ★</h2>
-          <div class="projects">
-            <article class="project-card">
-              <h3>📁 Fraud Detection Engine</h3>
-              <p>Rule-based fraud detection — velocity checks, geo-jumps, blacklists, real-time approve/review/decline.</p>
-              <p class="project-tags"><strong>Tags:</strong> Python · Data Processing · Rule Engine</p>
-              <a href="https://github.com/dararahussein/Fraud-Detection-System" target="_blank" rel="noopener noreferrer">[ Download from GitHub ]</a>
-            </article>
-            <article class="project-card">
-              <h3>📁 Weather Way</h3>
-              <p>Weather app with clean forecasts and good UX. API integration + JavaScript.</p>
-              <p class="project-tags"><strong>Tags:</strong> JavaScript · API · UI/UX</p>
-              <a href="https://github.com/darar/weather-way" target="_blank" rel="noopener noreferrer">[ Download from GitHub ]</a>
-            </article>
-            <article class="project-card">
-              <h3>📁 PunchStats</h3>
-              <p>Stats &amp; analytics tool — track performance data and visualize trends.</p>
-              <p class="project-tags"><strong>Tags:</strong> Analytics · Data Viz · Full Stack</p>
-              <a href="https://github.com/dararahussein/PunchStats" target="_blank" rel="noopener noreferrer">[ Download from GitHub ]</a>
-            </article>
-          </div>
-        </div>
-      </section>
+          <div id="notes-list" class="notes-list"></div>
+        </section>
+      </div>
 
-      <section class="win" id="contact">
-        <div class="win-titlebar">
-          <span class="win-title">contact.me — Send Me a Message!</span>
-          <div class="win-controls">
-            <button class="win-btn win-btn--min" type="button" aria-label="Minimize window">_</button>
-            <button class="win-btn win-btn--max" type="button" aria-label="Maximize window">□</button>
-            <button class="win-btn win-btn--close" type="button" aria-label="Close window">×</button>
-          </div>
-        </div>
-        <div class="win-body contact-body">
-          <h2 class="section-title">Let's Connect!!</h2>
-          <p>Wanna chat? Hit me up on LinkedIn — I'm in Minneapolis and always down to talk code.</p>
-          <p class="contact-links">
-            <a href="https://www.linkedin.com/in/dararahussein/" class="btn-retro btn-retro--big" target="_blank" rel="noopener noreferrer">► Add Me on LinkedIn</a>
-          </p>
-          <p>
-            <a href="https://github.com/dararahussein" target="_blank" rel="noopener noreferrer">GitHub</a>
-            ·
-            <a href="https://www.linkedin.com/in/dararahussein/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </p>
-          <div class="guestbook">
-            <p class="guestbook-title">~ Guestbook ~</p>
-            <p class="guestbook-msg">Thanks for visiting my site!! Sign my guestbook by connecting on LinkedIn. :)</p>
-          </div>
-        </div>
-      </section>
+      <!-- Distraction-Free Article Reader View (when clicking a Note) -->
+      <div id="article-view" class="article-view" hidden></div>
     </main>
 
+    <!-- Minimal Footer -->
     <footer class="footer">
-      <hr class="hr-rainbow">
-      <div class="construction" role="presentation" title="Under construction!"></div>
-      <p class="footer-counter">You are visitor #<span id="visitor-count">000000</span> !!</p>
-      <div class="badges" aria-hidden="true">
-        <span class="badge88 badge88--netscape">Netscape<br>NOW! 4.0</span>
-        <span class="badge88 badge88--html">HTML 4.0<br>approved</span>
-        <span class="badge88 badge88--notepad">Made with<br>Notepad</span>
-        <span class="badge88 badge88--y2k">Y2K OK!</span>
-        <span class="badge88 badge88--res">800×600<br>optimized</span>
-      </div>
-      <p class="footer-meta">
-        Best viewed in Netscape Navigator 4.0 · 800×600 · Last updated: June 2026
-      </p>
-      <p class="footer-copy">&copy; 2026 Darara Hussein. Made with HTML + Notepad vibes.</p>
-      <p class="footer-blink">Under perpetual construction 🚧</p>
+      <span id="local-clock" class="clock-mono">Minneapolis, MN</span>
+      <div id="footer-links" class="footer-links"></div>
     </footer>
   </div>
 
-  <button class="scroll-top btn-retro" id="scroll-top" type="button" aria-label="Back to top" hidden>▲ Top</button>
-
-  <nav class="taskbar" aria-label="Taskbar">
-    <button class="start-btn" id="start-btn" type="button" aria-expanded="false" aria-controls="start-menu">
-      <span class="start-logo" aria-hidden="true"></span>Start
-    </button>
-    <span class="taskbar-divider" aria-hidden="true"></span>
-    <div class="taskbar-tasks">
-      <a class="taskbar-btn" href="#about">📄 About</a>
-      <a class="taskbar-btn" href="#experience">📋 Resume</a>
-      <a class="taskbar-btn" href="#work">📁 Projects</a>
-      <a class="taskbar-btn" href="#contact">✉️ Contact</a>
-    </div>
-    <div class="taskbar-tray"><span id="taskbar-clock">--:--</span></div>
-  </nav>
-
-  <div class="start-menu" id="start-menu" hidden>
-    <div class="start-menu-side" aria-hidden="true">Darara&nbsp;98</div>
-    <ul>
-      <li><a href="#hero">🏠 Home</a></li>
-      <li><a href="#about">📄 About Me</a></li>
-      <li><a href="#experience">📋 My Resume</a></li>
-      <li><a href="#work">📁 Cool Projects</a></li>
-      <li><a href="#contact">✉️ Email Me!</a></li>
-      <li class="start-sep" role="separator"></li>
-      <li><a href="https://github.com/dararahussein" target="_blank" rel="noopener noreferrer">🐙 GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/dararahussein/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a></li>
-      <li class="start-sep" role="separator"></li>
-      <li><button type="button" id="shutdown-btn">🔌 Shut Down...</button></li>
-    </ul>
-  </div>
-
-  <div class="shutdown" id="shutdown" hidden>
-    <p class="shutdown-msg">It's now safe to turn off<br>your computer.</p>
-    <p class="shutdown-hint">(click anywhere to reboot)</p>
-  </div>
-
-  <script src="script.js"></script>
+  <script src="./data.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
