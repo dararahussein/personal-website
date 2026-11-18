@@ -312,7 +312,7 @@ button {
 .exp-top {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .exp-logo {
@@ -346,18 +346,20 @@ button {
   font-size: 14.5px;
   font-weight: 500;
   color: var(--text);
+  white-space: nowrap;
 }
 
 .exp-role {
   font-size: 13.5px;
   color: var(--text-secondary);
+  white-space: nowrap;
 }
 
 .exp-leader {
   flex: 1;
   border-bottom: 1px dashed var(--border);
-  margin: 0 4px;
-  min-width: 16px;
+  margin: 0 2px;
+  min-width: 8px;
 }
 
 .exp-period {
@@ -369,7 +371,7 @@ button {
 
 .exp-summary {
   margin: 0;
-  padding-left: 34px;
+  padding-left: 32px;
   font-size: 13.5px;
   color: var(--text-muted);
   line-height: 1.55;
@@ -678,7 +680,7 @@ button {
 }
 
 /* Responsive adjustments */
-@media (max-width: 540px) {
+@media (max-width: 600px) {
   .topnav {
     gap: 12px;
   }
@@ -688,13 +690,18 @@ button {
     row-gap: 2px;
   }
 
+  .exp-company,
+  .exp-role {
+    white-space: normal;
+  }
+
   .exp-leader {
     display: none;
   }
 
   .exp-period {
     width: 100%;
-    padding-left: 34px;
+    padding-left: 32px;
   }
 
   .note-row {
